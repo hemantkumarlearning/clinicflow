@@ -1,0 +1,267 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form styling */
+form {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+/* Inputs */
+input[type="text"],
+input[type="password"],
+input[type="datetime-local"]{
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.2s ease;
+    font-size: 1rem;
+    background-color: white;
+    color: #333;
+    appearance: none; /* Removes native styling in some browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input:focus{
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Paragraph below form */
+p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem;
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+form#appointment-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Labels */
+label {
+    font-weight: 500;
+}
+
+/* Inputs and select */
+input[type="text"],
+input[type="date"],
+select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.2s ease;
+    width: 100%;
+    appearance: none;
+}
+
+/* Focus styles */
+input:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button */
+form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* View Appointments button */
+#view-appointments-btn {
+    margin-top: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#view-appointments-btn:hover {
+    background-color: #218838;
+}
+
+/* Logout link */
+#logout-link {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    color: #dc3545;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#logout-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    form#appointment-form {
+        padding: 1.5rem;
+        width: 90%;
+    }
+}
+
+.appointment-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Appointment item style */
+.appointment-list li {
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Optional: Add tags or highlights */
+.appointment-list li .status {
+    font-size: 0.85rem;
+    color: #007bff;
+    font-weight: 500;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 600px;
+}
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.form-section {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h3 {
+    margin-bottom: 1rem;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dashboard-nav {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#logout-link {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#logout-link:hover {
+    text-decoration: underline;
+}
+
+/* Hide forms by default */
+.hidden {
+    display: none;
+}

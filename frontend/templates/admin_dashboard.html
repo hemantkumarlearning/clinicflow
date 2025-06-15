@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+
+    <button id="show-doctor-form">Add Doctor</button>
+    <button id="show-receptionist-form">Add Receptionist</button>
+
+    <div id="doctor-form" style="display:none;">
+        <h3>Create Doctor</h3>
+        <form id="create-doctor-form">
+            <input type="text" id="doc-name" placeholder="Doctor Name" required>
+            <input type="text" id="doc-specialty" placeholder="Specialty" required>
+            <input type="text" id="doc-username" placeholder="Username" required>
+            <input type="password" id="doc-password" placeholder="Password" required>
+            <button type="submit">Create Doctor</button>
+        </form>
+    </div>
+
+    <div id="receptionist-form" style="display:none;">
+        <h3>Create Receptionist</h3>
+        <form id="create-receptionist-form">
+        <!-- <input type="text" id="rec-name" placeholder="Receptionist Name" required> -->
+            <input type="text" id="rec-username" placeholder="Username" required>
+            <input type="password" id="rec-password" placeholder="Password" required>
+            <button type="submit">Create Receptionist</button>
+        </form>
+    </div>    
+    <a href="login.html" onclick="logout()" id="logout-link">Logout</a>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
