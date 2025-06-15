@@ -29,13 +29,14 @@ ClinicFlow is a full-stack web application for managing clinic operations with u
 #### 1. Clone the repo:
 
 ```
-git clone https://github.com/yourusername/clinicflow.git
+git clone https://github.com/hemantkumarlearning/clinicflow.git
 cd clinicflow
 ```
 
 #### 2. Create and activate a virtual environment:
 
 ```
+cd backend
 python -m venv env
 env/Scripts/activate
 ```
