@@ -61,7 +61,7 @@ DATABASE_URL=sqlite:///db.sqlite3
 python app.py
 ```
 
-Now you can use postman to testing or Go to frontend folder and open or use vscode Go live to open register.html on browser 
+Now you can use postman for testing or Go to frontend folder and open or use vscode Go live to open register.html on browser 
 
 ```
 cd .
