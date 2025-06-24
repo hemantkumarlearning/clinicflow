@@ -6,9 +6,20 @@ ClinicFlow is a full-stack web application for managing clinic operations with u
 
 - **Role-Based Access Control**
   - Patient: Register, login, book appointments.
+ 
+![Screenshot 2025-06-24 222948](https://github.com/user-attachments/assets/8eb8b417-6389-45d8-abc4-88c4eadc30f3)
+
+
   - Doctor: View their scheduled appointments.
   - Receptionist: View and confirm pending appointments.
+
+![Screenshot 2025-06-24 224032](https://github.com/user-attachments/assets/15651a93-8b33-457d-9c9b-c150fef91f3d)
+
+
   - Admin: Create/manage doctors and receptionists, view/delete all appointments.
+
+![Screenshot 2025-06-24 223110](https://github.com/user-attachments/assets/1d10135d-0309-41e2-a58f-48b7e434c48f)
+
 
 - **Authentication**
   - Secure login and role validation using JWT.
