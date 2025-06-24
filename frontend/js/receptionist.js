@@ -25,7 +25,7 @@ async function loadPendingAppointments() {
                 <td>${app.doctor_id}</td>
                 <td>${app.date}</td>
                 <td>${app.reason}</td>
-                <td><button onclick="confirmAppointment(${app.id})">Confirm</button></td>
+                <td><button class="confirm-button" onclick="confirmAppointment(${app.id})">Confirm</button></td>
             `;
             tbody.appendChild(row);
         });

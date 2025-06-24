@@ -44,3 +44,19 @@ nav a {
 nav a:hover {
     background-color: #1abc9c;
 }
+
+.confirm-button {
+    background-color: #28a745;  /* Green background */
+    color: white;               /* White text */
+    border: none;               /* Remove default border */
+    padding: 10px 16px;         /* Space inside the button */
+    font-size: 14px;            /* Font size */
+    border-radius: 4px;         /* Rounded corners */
+    cursor: pointer;            /* Pointer on hover */
+    transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+    background-color: #218838;  /* Darker green on hover */
+}
+
