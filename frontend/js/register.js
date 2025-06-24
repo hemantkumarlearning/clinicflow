@@ -5,7 +5,8 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
     const username = document.getElementById('reg-username').value.trim()
     const password = document.getElementById('reg-password').value;
     const name = document.getElementById('reg-name').value.trim();
-    const dobInput = document.getElementById('reg-dob').value; // expected: YYYY-MM-DDTHH:MM
+    const dobInput = document.getElementById('reg-dob').value;
+    console.log("DOB value being sent:", dobInput); // expected: YYYY-MM-DDTHH:MM
     const gender = document.getElementById('reg-gender').value.trim();
 
     // const dobDate = dobInput.split('T')[0]; // "2025-12-25T10:30" → "2025-12-25"

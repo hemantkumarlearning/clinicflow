@@ -3,28 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Receptionist Dashboard</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-        th { background-color: #f2f2f2; }
-        button { padding: 5px 10px; }
-        #logout-link {
-            display: block;
-            margin-top: 1rem;
-            text-align: left;
-            color: #dc3545;
-            font-weight: 500;
-            text-decoration: none;
-            }
-
-        #logout-link:hover {
-            text-decoration: underline;
-            }
-    </style>
+    <link rel="stylesheet" href="../css/receptionist.css">
 </head>
 <body>
     <h1>Pending Appointments</h1>
+    <nav>
+        <a href="login.html" onclick="logout()" id="logout-link">Logout</a>
+    </nav>
     <table id="appointmentsTable">
         <thead>
             <tr>
@@ -38,7 +23,6 @@
         </thead>
         <tbody id="appointmentsBody"></tbody>
     </table>
-    <a href="login.html" onclick="logout()" id="logout-link">Logout</a>
     <script src="../js/receptionist.js"></script>
 </body>
 </html>

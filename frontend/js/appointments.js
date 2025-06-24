@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const option = document.createElement('option');
                     option.value = doctor.id;
                     option.textContent = `${doctor.name} (${doctor.specialty})`;
+                    option.setAttribute('data-name', doctor.name);
                     doctorSelect.appendChild(option);
                 });
             } else {
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         const doctorId = doctorSelect.value;
+        const doctorName = doctorSelect.getAttribute('data-name');
         const date = document.getElementById('appointment-date').value;
         const reason = document.getElementById('reason').value;
 
@@ -58,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: JSON.stringify({
                     doctor_id: parseInt(doctorId),
+                    doctor_name:doctorName,
                     date,
                     reason
                 })
@@ -78,19 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const viewBtn = document.getElementById('view-appointments-btn');
-    viewBtn.addEventListener('click', () => {
-        const token = localStorage.getItem('accessToken');
-
-        if (!token) {
-            alert('You must be logged in to view your appointments.');
-            window.location.href = 'login.html';
-        } else {
-            window.location.href = 'my_appointments.html';
-        }
-    });
 });
 function logout() {
     localStorage.removeItem('accessToken');
     window.location.href = 'login.html';
+}
+
+function myappointment() {
+    window.location.href = 'my_appointments.html';
 }

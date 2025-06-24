@@ -5,13 +5,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin_dashboard.css">
 </head>
 <body>
     <h2>Admin Dashboard</h2>
-
-    <button id="show-doctor-form">Add Doctor</button>
-    <button id="show-receptionist-form">Add Receptionist</button>
+    <nav>
+        <a href="#" id="show-doctor-form">Add Doctor</a>
+        <a href="#" id="show-receptionist-form">Add Receptionist</a>
+        <a href="login.html" onclick="logout()" id="logout-link">Logout</a>
+    </nav>
+    <!-- <button id="show-doctor-form">Add Doctor</button>
+    <button id="show-receptionist-form">Add Receptionist</button> -->
 
     <div id="doctor-form" style="display:none;">
         <h3>Create Doctor</h3>
@@ -33,7 +37,6 @@
             <button type="submit">Create Receptionist</button>
         </form>
     </div>    
-    <a href="login.html" onclick="logout()" id="logout-link">Logout</a>
     <script src="../js/admin.js"></script>
 </body>
 </html>

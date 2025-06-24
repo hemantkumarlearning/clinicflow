@@ -34,6 +34,7 @@ class Appointment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     patient_id = db.Column(db.Integer, db.ForeignKey('patient.id'), nullable=False)
     doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id'), nullable=False)
+    doctor_name = db.Column(db.String(100), nullable=False)
     date = db.Column(db.DateTime, nullable=False)
     reason = db.Column(db.String(200), nullable=False)
     status = db.Column(db.String(20), default='pending')  # 'pending', 'confirmed', 'completed'

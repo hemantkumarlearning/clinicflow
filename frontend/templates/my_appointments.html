@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/my_appointments.css">
 </head>
 <body>
-    <h2>My Appointments</h2>
-    <ul id="appointments-list"></ul>
+    <div class="container">
+        <h2>My Appointments</h2>
+        <nav>
+            <a href="login.html" onclick="logout()" id="logout-link">Logout</a>
+            <a href="appointments.html" onclick="appointment()" id="myappointment-link">Dashboard</a>
+        </nav>
+        <ul id="appointments-list"></ul>
+    </div>
 
     <script src="../js/my_appointments.js"></script>
 </body>

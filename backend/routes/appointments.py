@@ -19,6 +19,7 @@ def book_appointment():
 
     data = request.get_json()
     doctor_id = data.get('doctor_id')
+    doctor_name = data.get('doctor_name')
     date_str = data.get('date')
     reason = data.get('reason')
 
@@ -31,6 +32,7 @@ def book_appointment():
     appointment = Appointment(
         patient_id=patient.id,
         doctor_id=doctor_id,
+        doctor_name=doctor_name,
         date=date_obj,
         reason=reason,
         status='pending'
@@ -92,6 +94,7 @@ def patient_appointments():
         {
             "id": a.id,
             "doctor_id": a.doctor_id,
+            "doctor_name": a.doctor_name,
             "date": a.date.isoformat(),
             "reason": a.reason,
             "status": a.status

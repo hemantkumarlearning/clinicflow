@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/appointments.css">
 </head>
 <body>
     <h2>Book an Appointment</h2>
+    <nav>
+        <a href="login.html" onclick="logout()" id="logout-link">Logout</a>
+        <a href="my_appointments.html" onclick="myappointment()" id="myappointment-link">My Appointment</a>
+    </nav>
     <form id="appointment-form">
         <label for="doctor-select">Select Doctor:</label>
         <select id="doctor-select" required>
@@ -14,15 +18,13 @@
         </select>
 
         <label for="appointment-date">Date:</label>
-        <input type="date" id="appointment-date" required>
+        <input type="datetime-local" id="appointment-date" required>
 
         <label for="reason">Reason:</label>
         <input type="text" id="reason" required>
 
         <button type="submit">Book Appointment</button>
     </form>
-    <button id="view-appointments-btn">View My Appointments</button>
-    <a href="login.html" onclick="logout()" id="logout-link">Logout</a>
     <script src="../js/appointments.js"></script>
 </body>
 </html>

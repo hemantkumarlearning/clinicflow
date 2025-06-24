@@ -11,26 +11,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     fetch(`${API_BASE}/appointments/patient`, {
-        method: 'GET',
-        headers: {
-            'Authorization': `Bearer ${token}`
-        }
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${token}`
+    }
     })
-    .then(res => res.json())
+    .then(res => {
+        if (!res.ok) throw new Error("Network response was not ok");
+        return res.json();
+    })
     .then(data => {
         if (Array.isArray(data) && data.length > 0) {
-        data.forEach(appt => {
-            const li = document.createElement('li');
-            const date = new Date(appt.date).toLocaleDateString();
-            li.textContent = `Doctor ID: ${appt.doctor_id} | Date: ${date} | Reason: ${appt.reason} | Status: ${appt.status}`;
-            list.appendChild(li);
-        });
-    } else {
-        list.textContent = 'No appointments found.';
-    }
+            data.forEach(appt => {
+                const li = document.createElement('li');
+                const date = new Date(appt.date).toLocaleString();
+
+                li.innerHTML = `
+                    <div class="appointment-card">
+                        <h3>Dr. ${appt.doctor_name || appt.doctor_id}</h3>
+                        <p><strong>Date:</strong> ${date}</p>
+                        <p><strong>Reason:</strong> ${appt.reason}</p>
+                        <p><strong>Status:</strong> <span class="status ${appt.status.toLowerCase()}">${appt.status}</span></p>
+                    </div>
+                `;
+                list.appendChild(li);
+            });
+        } else {
+            list.innerHTML = '<li class="empty">No appointments found.</li>';
+        }
     })
     .catch(err => {
         console.error('Error loading appointments:', err);
-        list.textContent = 'Failed to load appointments.';
+        list.innerHTML = '<li class="error">Failed to load appointments.</li>';
     });
 });
+function logout() {
+    localStorage.removeItem('accessToken');
+    window.location.href = 'login.html';
+}
+
+function appointment() {
+    window.location.href = 'appointments.html';
+}

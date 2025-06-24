@@ -1,0 +1,91 @@
+body {
+    background-color: #f4f6f8;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+form#appointment-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+/* Labels */
+label {
+    font-weight: 500;
+}
+
+/* Inputs and select */
+input[type="text"],
+input[type="datetime-local"],
+select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.2s ease;
+    width: 100%;
+    appearance: none;
+}
+
+/* Focus styles */
+input:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button */
+form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+
+nav {
+    margin-bottom: 30px;
+    background-color: #2c3e50;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    justify-content: flex-end;
+    margin-left: 15px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1abc9c;
+}
+
